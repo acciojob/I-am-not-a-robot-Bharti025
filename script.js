@@ -4,7 +4,8 @@ let number=Math.floor(Math.random()*5)+1;
 image.setAttribute("class","img"+number);
 let images=document.getElementsByTagName("img");
 let reset=document.getElementById("reset");
-let reset=document.getElementById("verify");
+let verify=document.getElementById("verify");
+let para=document.getElementyId("para");
 reset.style.display="none";
 verify.style.display="none";
 let arr=[];
@@ -19,7 +20,14 @@ for(let i=0; i<images.length; i++){
 		}
 	})
 }
-
+verify.addEventListener("click",()=>{
+if(arr[0]==arr[1]){
+	para.textContent="You are a human. Congratulations!"
+}
+else{
+	para.textContent="We can't verify you as a human. You selected the non-identical tiles."
+}	
+})
 
 
 
