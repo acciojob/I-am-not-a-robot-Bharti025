@@ -1,7 +1,7 @@
 //your code here
-let image=document.getElementById("random");
+let random=document.getElementById("random");
 let number=Math.floor(Math.random()*5)+1;
-image.setAttribute("class","img"+number);
+random.setAttribute("class","img"+number);
 let images=document.getElementsByTagName("img");
 let reset=document.getElementById("reset");
 let verify=document.getElementById("verify");
@@ -16,7 +16,9 @@ for(let i=0; i<images.length; i++){
 			reset.style.display="block";
 		}
 		if(arr.length==2){
-			verify.style.display="block";
+			verify.style.display="block;
+				arr.length=0;
+			
 		}
 	})
 }
